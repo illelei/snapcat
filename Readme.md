@@ -1,3 +1,7 @@
+Get started with PHP and the EyeEm API in 1 minute!
+
+This boilerplate is made of Silex, Bootstrap, jQuery, the EyeEm PHP wrapper and a minimalist template system.
+
 Setup
 -----
 

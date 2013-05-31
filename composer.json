@@ -1,7 +1,6 @@
 {
     "require": {
         "silex/silex": "1.0.*@dev",
-        "twig/twig": "1.*",
         "eyeem/php-wrapper": "~2.1"
     }
 }
