@@ -9,9 +9,13 @@ Setup
 
 4. Get Composer and install dependencies:
 
-    curl -s http://getcomposer.org/installer | php
-    php composer.phar install
+```
+curl -s http://getcomposer.org/installer | php
+php composer.phar install
+```
 
 5. From PHP 5.4, you can simply run:
 
-    php -S localhost:8008 -t web
+```
+php -S localhost:8008 -t web
+```
