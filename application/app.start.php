@@ -48,8 +48,10 @@ $app->get('/auth/signout', function() use($app, $eyeem) {
 });
 
 $app->get('/auth/callback', function() use($app, $eyeem) {
-  $token = $eyeem->getToken($_GET['code']);
-  $_SESSION['access_token'] = $token['access_token'];
+  if (isset($_GET['code'])) {
+    $token = $eyeem->getToken($_GET['code']);
+    $_SESSION['access_token'] = $token['access_token'];
+  }
   return $app->redirect('/friends');
 });
 
