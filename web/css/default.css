@@ -1,0 +1,33 @@
+body {
+  background: #404040;
+  padding-top: 40px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+#content {
+  color: #CCCCCC;
+  background: #2E2E2E;
+  padding: 25px;
+}
+
+#content .modal {
+  color: #333;
+}
+
+#content h2 {
+  margin-bottom: 25px;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  background: #333;
+  float: left;
+  text-align: center;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+.photo > img {
+  vertical-align: middle;
+}
