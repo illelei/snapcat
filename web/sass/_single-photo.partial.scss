@@ -1,0 +1,158 @@
+// Tags
+
+.albumlink {
+  @include border-radius(4px);
+  display:inline-block;
+  color: $eyeem-white;
+  padding: 10px 12px 8px 12px;
+  margin: 2px {
+    bottom: 4px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $eyeem-white;
+  }
+}
+
+a.tag {
+  background-color: $eyeem-tags-violet;
+  margin-right: 4px;
+  &:hover {
+    background-color: lighten($eyeem-tags-violet, 5%);
+  }
+}
+
+a.venue {
+  background-color: $eyeem-tags-green;
+  &:hover {
+    background-color: lighten($eyeem-tags-green, 5%);
+  }
+}
+
+a.city, a.country {
+  background-color: transparent;
+  padding: 0px {
+    right: 1px;
+  }
+  &:hover {
+    color: darken($eyeem-white, 15%) !important;
+  }
+}
+
+span.junction {
+  background-color: $eyeem-lightgrey;
+  color: $eyeem-black;
+  &:hover {
+    text-decoration: none;
+    color: $eyeem-black;
+  }
+}
+
+
+.btn-eyeem-topic {
+  padding: 10px 12px 8px 12px;
+  font-family: $sofiaProBold;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  .location {
+    background: #99CC66;
+    &:hover {
+      background: #A8DB6E;
+    }
+    &:active {
+      background: #46773E;
+    }
+  }
+  .venue {
+    background: #9966CC;
+    &:hover {
+      background: #A273D8;
+    }
+    &:active {
+      background: #5A3F7A;
+    }
+  }
+  .junction {
+    background: $eyeem-white;
+    @include opacity(20);
+    padding: 10px 8px 8px 8px;
+    color: #333333;
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+.user-profile {
+  font-family: $sofiaProLight;
+  font-size: 10pt;
+}
+
+.username {
+  img {
+    float: left;
+    margin: 0px {
+      right: 3%;
+      bottom: 10px;
+    }
+    max-width: 30%;
+  }
+  h2 {
+    max-width: 67%;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12pt;
+  }
+  .ellipsis {
+    max-width: 67%;
+  }
+  .fllw {
+    width: 100% !important;
+  }
+}
+
+.comment {
+  img {
+    float: left;
+    padding: 4px {
+      right: 8px;
+    }
+    max-width: 12%;
+  }
+  .text {
+    display: inline-block;
+    width: 75%;
+    .age {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+    .nick {
+
+    }
+    .message {
+      font-size: 16px;
+      color: $eyeem-white;
+      font-family: $sofiaProExtraLight;
+      line-height: 1.2;
+      a {
+        font-family: $sofiaProRegular;
+      }
+    }
+    .btn-comment-delete {
+      font-size: 13px;
+      text-decoration: underline !important;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+  padding-bottom: 10px;
+}
+
+.photo-age span {
+  background-color: $eyeem-white;
+  @include border-radius(43px);
+  color: #1A1A1A;
+  padding: 1px 4px 0;
+}

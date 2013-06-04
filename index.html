@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Snapcat</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="style.css">
+<script src="jspkg-archive/vendor/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function slideSwitch() {
+	    var $active = $('#slideshow img.active');
+	    if ( $active.length == 0 ) $active = $('#slideshow img:last');
+	    // use this to pull the images in the order they appear in the markup
+	    var $next =  $active.next().length ? $active.next()
+	        : $('#slideshow img:first');
+	    $active.addClass('last-active');
+	    $next.css({opacity: 0.0})
+	        .addClass('active')
+	        .animate({opacity: 1.0}, 1000, function() {
+	            $active.removeClass('active last-active');
+	        });
+	}
+	$(function() {
+	    setInterval( "slideSwitch()", 6000 );
+});
+</script>
+</head>
+
+<!-- opacity mask on the whole background photo -->
+<header>
+	<!-- slideshow -->
+	<div id="slideshow">
+		<img class="active" src="http://cdn.eyeem.com/thumb/h/2000/f9f0173ee180309fce151179eb15e4b0177b5ac4-1369715705" alt="" />
+		<img src="http://cdn.eyeem.com/thumb/h/2000/df3482978e5259045335834b7257bd2103ff340d-1368917113" alt="" />
+		<img src="http://cdn.eyeem.com/thumb/h/2000/05b5451a98f87128e8e795c86dfdf0efc343fe42-1369802518" alt="" />
+		<img src="http://cdn.eyeem.com/thumb/h/2000/5a60e449fcacbb397c50b28ebee785862f50fe87-1368293332" alt="" />
+		<img src="http://cdn.eyeem.com/thumb/h/2000/f9177dae962441aeec4dc1e1e8a52eb8d92fe1e5-1369930076" alt="" />
+		<img src="http://cdn.eyeem.com/thumb/h/2000/f7fc05b82a58c0cf202603db5df3e49a31ea18f9-1369167647" alt="" />
+	</div>
+</header>
+
+<body>
+
+	<div class="container">
+		<img src="images/snapcatlogowhitetagline.png"><br />
+	</div>
+
+	<a href="http://play.google.com/store/apps/details?id=com.snapcat.app">
+	<div class="button">
+		Download the Android app
+	</div>
+	</a>
+	<a href="http://www.eyeem.com/oauth/authorize?client_id=AXOnvX51jUW6VxV47j78FvOCypa6zecN&response_type=code&redirect_uri=http://getsnapc.at/web-version/">
+	<div class="button">
+		Try it in your browser
+	</div>
+	</a>
+
+</body>
+
+</html>

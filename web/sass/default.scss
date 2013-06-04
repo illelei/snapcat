@@ -1,0 +1,19 @@
+/* base styles */
+@import "base";
+
+/* partial specific styles */
+// @import "header-row.partial";
+@import "photo-grid.partial";
+@import "single-photo.partial";
+@import "sharing-block.partial";
+
+// @import "static.view";
+@import "signup-and-login.view";
+
+@import "theater";
+
+/* PHOTO HACK DAY */
+@import "phd";
+
+// self-containing TODO list of stuff that's still to be solved properly:
+@import "shame";

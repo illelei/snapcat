@@ -1,0 +1,82 @@
+.head-of-header {
+  img {
+    float: left;
+    padding: 0px {
+      right: 10px;
+      bottom: 5px;
+    }
+    max-width: 10%;
+  }
+  h2 {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    line-height: 1;
+    font-size: 12pt;
+  }
+  .dont-be-a-button {
+    width: 100% !important;
+  }
+  .padding {
+    padding-top: 10px;
+    padding-bottom: 10px !important;
+  }
+}
+
+.header-row {
+  position: relative;
+  background-color: $navbarInverseBackground !important;
+  margin: 0px {
+    bottom: 15px;
+  }
+  h1 {
+    font-family: $sofiaProBold;
+    font-size: 20pt;
+    display: inline-block;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px {
+      right: 5px;
+    }
+  }
+  .padding {
+    padding-bottom: 0px;
+  }
+  .nickname {
+    font-family: $sofiaProExtraLight;
+    font-size: 13pt;
+    color: $eyeem-white;
+  }
+  h2 {
+    font-size: 10pt;
+    color: $eyeem-lightgrey;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.3;
+  }
+}
+
+.subpage-arrow {
+  display: inline-block;
+  width: 100%;
+  height: 12px;
+  margin-bottom: -6px;
+  &.active {
+    background: image-url("tri-selected.png") no-repeat;
+    background-position: 55% 0%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-row {
+    font-size: 13pt;
+    background: image-url("bg-grain.png");
+    h1 {
+      font-family: $sofiaProRegular;
+      font-size: 13pt;
+      line-height: 1;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}

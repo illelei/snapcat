@@ -1,0 +1,28 @@
+// $eyecons-layout:vertical;
+// @import "sharing-block/*.png";
+// @include all-sharing-block-sprites;
+
+ul.sharing-block {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  li {
+    height: 36px;
+    width: 36px;
+    margin: 0px {
+      bottom: 6px;
+    }
+    .txt-btn {
+      font-size: 13px;
+      text-decoration: underline;
+      white-space: nowrap;
+    }
+    span, .sharing-block-embed {
+      display: block;
+      height: 36px;
+      width: 36px;
+    }
+  }
+}
+
+.vhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }

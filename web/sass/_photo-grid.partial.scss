@@ -1,0 +1,56 @@
+.js_picrow {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hover-box {
+  display: inline-block;
+  position: relative;
+  height: auto;
+}
+
+.hover-box-no-js {
+  display: inline-block;
+  max-width: 24%;
+}
+
+.hover-item {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis; /* will make [...] at the end */
+  overflow: hidden;
+  white-space: nowrap;
+  color: $eyeem-white;
+  background: image-url("bg-50-percent-black.png") repeat;
+  padding: 0;
+  @include opacity(0);
+}
+
+.hover-box:hover .hover-item,
+.hover-box:active .hover-item {
+  @include opacity(100);
+}
+
+.hover-item-top {
+  top: 0px;
+  img {
+    height: 24px;
+    padding: 8px;
+  }
+  span {
+    line-height: 24px;
+    padding: 14px {
+      left: 0px;
+    }
+  }
+}
+
+.hover-item-bottom {
+  bottom: 0px;
+}
+
+.semi-trans {
+  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
+}

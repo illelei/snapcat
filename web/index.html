@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="Snapcat, EyeEm, Awesomeness" name="keywords">
+  <meta content="THE social network for your cat" name="description">
+  <meta content="Snapcat for Web!" name="title">
+  <title>Snapcat for Web</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+  <style TYPE="text/css">
+    .js_icon {
+      opacity : 0.1;
+      cursor: hand; cursor: pointer;
+    }
+    .icon_active {
+      opacity : 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="pagination-right"><img src="images/snapcatlogowhite.png" style="width: 70px" class="make-it-stawwwp"></header>
+  <img class="a" src="images/icon-mouse.png" style="display:none"></div>
+  <div class="row-fluid">
+    <div class="span12 pagination-centered">
+      <h1>select your icon:</h1>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span2 offset2 pagination-centered"><img class="js_icon icon_active" data-icon="mouse" src="images/icon-mouse.png"></div>
+    <div class="span2 pagination-centered"><img class="js_icon" data-icon="yarn" src="images/icon-yarn.png"></div>
+    <div class="span2 pagination-centered"><img class="js_icon" data-icon="cat"  src="images/icon-cat.png"></div>
+    <div class="span2 pagination-centered"><img class="js_icon" data-icon="bird" src="images/icon-bird.png"></div>
+  </div>
+  <div class="vertical-separator-big"></div>
+  <section class="row-fluid">
+    <div class="padding" id="padding">
+      <div class="container span4" id="video-container" style="display:none"><video autoplay="true" id="video-element"></video></div>
+    </div>
+  </section>
+  <span id="canvases"></span>
+  <script src="js/action-buttons.js"></script>
+  <script src="js/canvas-to-blob.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/snapcat.js"></script>
+</body>
+</html>

@@ -1,0 +1,762 @@
+@import "php-errors";
+
+/* place to keep own custom mixins, global variables (e.g. colors) and so on, so they’re available to any stylesheet that includes it. */
+/* Styleguide */
+@import "styleguide";
+
+@import "compass";
+/* @import "compass/reset"; */
+/* @import "compass/utilities"; */
+
+/* Sofia Pro Fonts */
+@import "fonts";
+
+/* Bootstrap for sass ( https://github.com/jlong/sass-twitter-bootstrap ) */
+@import "bootstrap/bootstrap";
+@import "bootstrap/responsive";
+
+/* Buttons and Forms */
+@import "eyeem-buttons";
+// @import "form-validation";
+
+// /* JS libraries */
+// @import "leaflet.js";
+
+body {
+  background: $eyeem-darkgrey;
+  height: 100%;
+}
+
+img {
+  font-color: transparent; // don't show alt-texts
+}
+
+// $eyecons-layout: vertical;
+// $eyecons-spacing: 1px;
+// @import "eyecons/*.png";
+// @include all-eyecons-sprites;
+// $eyecons-layout: vertical;
+// @import "eyecons-mobile/*.png";
+// @include all-eyecons-mobile-sprites;
+
+.eyecon {
+  display:inline-block;
+  height: 25px;
+  line-height: 25px;
+  min-width: 25px;
+  padding-left: 28px;
+  &:hover {
+    text-decoration: none
+  }
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+.eyecons-heart {
+  height: 16px;
+  line-height: 16px;
+  min-width: 19px;
+  padding-left: 28px;
+  margin-bottom: 10px;
+}
+
+.eyecons-comments {
+  height: 16px;
+  line-height: 16px;
+  min-width: 19px;
+  padding-left: 28px;
+  margin-bottom: 10px;
+}
+
+.big-like-eyecon {
+  display:inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -21px !important;
+  height: 42px;
+  min-width: 42px;
+}
+
+.big-edit-eyecon {
+  display:inline-block;
+  position: absolute;
+  top: 50%;
+  right: 26px;
+  margin-top: -21px !important;
+  height: 42px;
+  min-width: 42px;
+}
+
+.small-like-eyecon {
+  display:inline-block;
+  height: 30px;
+  min-width: 30px;
+  margin: 5px !important;
+}
+
+.big-edit-eyecon {
+  display:inline-block;
+  height: 42px;
+  min-width: 42px;
+}
+
+.scroll-up-button {
+  display: none;
+  position: fixed;
+  max-width: 5%;
+  bottom: 10px;
+  right: 2%;
+  padding: 0px;
+  margin: 0px;
+  color: inherit;
+  background-color: transparent;
+  border: 0px !important;
+  @include box-shadow(0px);
+  @include opacity(40);
+  &:hover {
+    @include opacity(100);
+  }
+}
+
+.photo-map .map .map-item {
+  width: 100%;
+  height: 120px;
+}
+
+.album-map {
+  position: relative;
+  .map .map-item {
+    width: 100%;
+    height: 172px;
+  }
+  .powered {
+    position: absolute;
+    z-index: 999; // signup overlay is 1000.
+    top: 0;
+    right: 0;
+  }
+  .head {
+    position: absolute;
+    z-index: 999; // signup overlay is 1000.
+    bottom: 0;
+    left: 0;
+    background-color: $navbarInverseBackground !important;
+    width: 100%;
+    @include opacity(50);
+  }
+}
+
+.eyecon-mobile-small {
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  line-height: 16px;
+  min-width: 20px;
+  padding-left: 25px;
+  margin: 0px {
+    bottom: 10px;
+  }
+  &:hover {
+    text-decoration: none
+  }
+}
+
+.photohover-eyecon {
+  display:inline-block;
+  line-height: 12px;
+  height: 12px;
+  min-width: 12px;
+  padding-left: 16px;
+  margin: 14px {
+    right: 0px;
+  }
+  &:hover {
+    text-decoration: none
+  }
+}
+
+button.dont-be-a-button{
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  color: inherit;
+  background-color: transparent;
+  border: 0px !important;
+  @include box-shadow(0px);
+  &:hover {
+    color: $eyeem-white;
+  }
+}
+
+
+textarea[type="text"].eyeem-form-input,
+input[type="text"].eyeem-form-input,
+input[type="password"].eyeem-form-input,
+input[type="datetime"].eyeem-form-input,
+input[type="datetime-local"].eyeem-form-input,
+input[type="date"].eyeem-form-input,
+input[type="month"].eyeem-form-input,
+input[type="time"].eyeem-form-input,
+input[type="week"].eyeem-form-input,
+input[type="number"].eyeem-form-input,
+input[type="password"].eyeem-form-input,
+input[type="email"].eyeem-form-input,
+input[type="url"].eyeem-form-input,
+input[type="search"].eyeem-form-input,
+input[type="tel"].eyeem-form-input,
+input[type="color"].eyeem-form-input {
+  width: 97%;
+  display: inline-block;
+  height: 32px;
+  background: #2b2a2b;
+  @include box-shadow(0px 1px 2px -1px #000000 inset, 0px 1px #222222);
+  @include border-radius(4px);
+  @include text-shadow(0px -1px 0px #000000);
+  padding: 8px {
+    left: 12px;
+  };
+  border: 1px solid $black;
+  font-family: $sofiaProLight;
+  font-size: 14px;
+  color: $eyeem-lightgrey;
+  text-decoration: none;
+  font-weight: normal;
+  ::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #4d4d4d;
+    @include text-shadow(0px -1px 0px #000000);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 14px;
+    color: #4d4d4d;
+    @include text-shadow(0px -1px 0px #000000);
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 14px;
+    color: #4d4d4d;
+    @include text-shadow(0px -1px 0px #000000);
+  }
+  :-ms-input-placeholder {
+    font-size: 14px;
+    color: #4d4d4d;
+    @include text-shadow(0px -1px 0px #000000);
+  }
+  &:focus {
+    background-color: #272727;
+    outline:none;
+    color: #ffffff;
+  }
+}
+
+input[type="number"].eyeem-form-input {
+  width: 50px !important;
+  margin-left: 30px;
+  background-color: $eyeem-darkgrey !important;
+}
+
+textarea.embed-code {
+  height: 90px !important;
+  background-color: $eyeem-darkgrey !important;
+}
+
+.comment-input {
+  height: 28px !important;
+}
+
+.error {
+  @include box-shadow(0px 0 3px $eyeem-accentualcolor-red);
+  background-color: $eyeem-black;
+  color: $eyeem-lightgrey;
+  padding: 10px;
+  border: 1px solid $eyeem-accentualcolor-red;
+  margin: 0px {
+    bottom: 10px;
+    top: 10px;
+  }
+}
+
+a {
+  cursor: hand; cursor: pointer;
+}
+
+#signup-overlay {
+  position: fixed;
+  background: image-url("/images/bg-signup-overlay.png") repeat transparent;
+  background-position: 50% 0%;
+  display: block;
+  z-index: 1000; // set to 1100 to cover the navbar as well
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  div {
+    font-family: $sofiaProExtraLight !important;
+    color: $eyeem-white;
+    position: absolute;
+    width: 550px;
+    left: 50%;
+    margin-left: -275px;
+  }
+  div.above {
+    top: 110px;
+  }
+  div.below {
+    top: 380px;
+  }
+  a {
+    text-decoration: underline !important;
+  }
+  a.eyeem-button {
+    text-decoration: none !important;
+  }
+}
+
+.onboarding {
+  background: image-url("bg-onboarding.png") repeat-x;
+  background-position: 0 -50px; // TODO: better crop the background
+}
+
+@media (max-width: 767px) {
+  body{
+    font-family: $sofiaProLight;
+  }
+
+  #signup-overlay {
+    background-size: 767px;
+    background-position: 50% 130px;
+    div {
+      color: $eyeem-white;
+      position: absolute;
+      width: 300px;
+      left: 50%;
+      margin-left: -150px;
+    }
+    div.above {
+      top: 110px;
+    }
+    div.below {
+      top: 300px;
+    }
+  }
+}
+
+ul.filters-tagging-discover {
+  padding: 0px;
+  list-style: none;
+  li {
+    font-family: $sofiaProExtraLight;
+    line-height: 1.0;
+    font-size: 12pt;
+    color: $eyeem-white;
+    background: image-url("mobile/bullet.png") no-repeat;
+    background-size: 10px;
+    background-position: 0 5px;
+    margin: 6% 0px 0px -20%;
+    padding: 0px 0px 0px 10%;
+  }
+}
+
+#js_loading {
+  display: none;
+}
+
+.find-friends-box {
+  position: relative;
+  .header {
+    text-transform: uppercase;
+    color: $eyeem-white;
+    @include text-shadow(0px 1px 1px rgba(0,0,0,1));
+  }
+  &.fb .header {
+    background-color: #3c5b97;
+  }
+  &.tw .header {
+    background-color: #00aee9;
+  }
+  &.sg .header {
+    background-color  : #666;
+  }
+}
+
+.ff-border {
+  background-color: $eyeem-black;
+  &.fb {
+    border: 1px solid #3c5b97;
+  }
+  &.tw {
+    border: 1px solid #00aee9;
+  }
+  &.sg {
+    border: 1px solid #666;
+  }
+}
+
+.pull-up {
+  margin-top: -20px;
+}
+
+.vr {
+  border-left: 1px solid #4d4d4d !important;
+}
+
+.login-dropdown {
+  min-width: 300px;
+}
+
+.form-modal-body {
+  overflow: visible !important;
+}
+
+.fb-like-list {
+  width: 230px;
+  background: $eyeem-white !important;
+}
+
+.ellipsis {
+  padding: 2px;
+  text-overflow: ellipsis; /* will make [...] at the end */
+  white-space: nowrap; /* paragraph to one line */
+  overflow: hidden; /* older browsers */
+}
+
+.forgot-link {
+  color: $eyeem-lightgrey !important;
+  line-height: 60px;
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+//
+// Modals
+// --------------------------------------------------
+
+// Background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindexModalBackdrop;
+  background-color: $black;
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  @include opacity(80);
+}
+
+// Base modal
+.modal.login-modal {
+  @include border-radius(0);
+  padding: 0 !important;
+  top: 50%;
+  left: 10%;
+  width: 80%;
+  margin: -300px 0 0 0;
+  background-color: transparent;
+  background: image-url("bg-topbar.png");
+
+  &.fade {
+    @include transition(opacity .3s linear, top .3s ease-out);
+    top: -25%;
+  }
+  &.fade.in {
+    top: 50%;
+  }
+
+  .modal-body {
+    background: image-url("bg-onboarding.png") repeat-x;
+    background-position: 0 -50px; // TODO: better crop the background
+    padding: 2%;
+    max-height: 500px;
+    .close {
+      display: inline-block;
+      margin-top: 2px;
+      width: 20px;
+      height: 20px;
+      background: image-url("theater-close.png") no-repeat 0 0;
+      &:hover {
+        background-position: 0 -30px;
+      }
+      &:active {
+        background-position: 0 -60px;
+      }
+    }
+    .or {
+      padding-top: 100px;
+      min-height: 230px;
+    }
+    .ff-border {
+      background-color: transparent;
+      min-height: 230px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      &.fb {
+        padding-top: 70px;
+      }
+    }
+  }
+}
+
+.form-line-height {
+  line-height: 60px;
+}
+
+input[type=checkbox].s-timeline-checkbox,
+input[type=checkbox].b-timeline-checkbox {
+  display:none;
+}
+
+input[type=checkbox].s-timeline-checkbox + label {
+  background: image-url("/images/check-small-inactive.png") no-repeat;
+  height: 10px;
+  width: 10px;
+  display:inline-block;
+  line-height: 10px;
+  padding: 0 {
+    right: 10px;
+  }
+}
+
+input[type=checkbox].s-timeline-checkbox:checked + label {
+  background: image-url("/images/check-small-active.png") no-repeat;
+}
+
+input[type=checkbox].b-timeline-checkbox + label {
+  background: image-url("/images/check-big-inactive.png") no-repeat;
+  height: 20px;
+  width: 20px;
+  display:inline-block;
+  line-height: 20px;
+  padding: 0 {
+    right: 20px;
+  }
+}
+
+input[type=checkbox].b-timeline-checkbox:checked + label {
+  background: image-url("/images/check-big-active.png") no-repeat;
+}
+
+input[type=radio].modal-radio {
+  display:none;
+}
+
+input[type=radio].modal-radio + label {
+  background: image-url("/images/check-small-inactive.png") no-repeat;
+  height: 10px;
+  width: 10px;
+  display:inline-block;
+  line-height: 10px;
+  padding: 0 {
+    right: 10px;
+  }
+}
+
+input[type=radio].modal-radio:checked + label {
+  background: image-url("/images/check-small-active.png") no-repeat;
+}
+
+.actual-label {
+  display: inline-block;
+  line-height: 12px;
+  font-size: 12px;
+  &.big-label {
+    line-height: 16px;
+    font-size: 16px;
+  }
+}
+
+.login-spinner {
+  display: none;
+  padding-top: 14px;
+}
+
+.likers-button {
+  vertical-align: middle !important;
+  font-size: inherit !important;
+  color: $eyeem-white !important;
+  margin-top: -3px !important;
+  font-weight: bold !important;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.liker-thumb {
+  height: 50px;
+  width: 50px;
+}
+
+.big-theater-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+
+@media (min-width: 979px) and (max-width: 1300px) {
+  .hide-when-small {
+    display: none;
+  }
+}
+
+.space-for-like-button {
+  padding-right: 80px;
+}
+
+@media (max-width: 978px) {
+  .space-for-like-button {
+    padding-right: 0px;
+  }
+}
+
+/* layout styles */
+#container {
+  color: $eyeem-lightgrey;
+  overflow: hidden;
+}
+
+h1 {
+  color: $eyeem-white;
+  margin: 0px;
+  padding: 0px {
+    bottom: 20px;
+  }
+  line-height: 1.3;
+  font-size: 19pt;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 24pt;
+  }
+}
+
+h2 {
+  font: $sofiaProLight;
+  margin: 0px;
+  padding: 0px {
+    bottom: 12px;
+  }
+  line-height: 1.5;
+  font-size: 15pt;
+}
+
+h2.only-top-margin {
+  padding: 0px {
+    top: 10px !important;
+    bottom: 0px !important;
+  }
+  margin: 0px {
+    top: 10px !important;
+    bottom: 0px !important;
+  }
+  line-height: 1;
+}
+
+ul.info {
+  list-style-type: none;
+  display:block;
+  margin: 0px;
+  width: 94%;
+  padding: 0% {
+    left: 3%;
+    right: 3%;
+  }
+  h5 {
+    color: $eyeem-lightgrey;
+    margin: 0px;
+    padding-top: 10px;
+    font-style: bold;
+  }
+  h2 {
+    margin-top: 0px;
+  }
+  h3 {
+    color: $eyeem-lightgrey;
+  }
+}
+
+.vertical-separator-big {
+  height: 44px;
+}
+
+.vertical-separator-medium {
+  height: 36px;
+}
+
+.vertical-separator-small {
+  height: 12px;
+}
+
+img.log-in-out {
+  height: 25px;
+}
+
+.top-margin {
+  margin-top: 65px;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .top-margin {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) { // no gap between navbar and content on phone
+  .top-margin {
+    margin-top: 50px;
+  }
+}
+
+.eyeem-black {
+  background-color: $eyeem-black;
+}
+
+.eyeem-darkgrey, .eyeem-darkgray {
+  background-color: $eyeem-darkgrey;
+}
+
+.navbar-color {
+  background-color: $navbarInverseBackground;
+}
+
+.grain-bg {
+  background: image-url("bg-grain.png");
+  font-family: $sofiaProLight;
+}
+
+.app-box {
+  background-color : $eyeem-black;
+  display          : inline-block;
+  float            : left;
+  margin           : 0 12px 12px;
+  padding          : 4px;
+  text-align       : center;
+  .icon {
+    height: 150px;
+  }
+  img {
+    text-align: left;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .eyeem-black, .eyeem-darkgrey, .eyeem-darkgray, .navbar-color, .header-row {
+    background: image-url("bg-grain.png");
+  }
+}

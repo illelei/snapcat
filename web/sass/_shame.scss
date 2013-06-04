@@ -1,0 +1,299 @@
+// A place to keep all the hacky CSS code until it gets refactored,
+// idea taken from this article: http://csswizardry.com/2013/04/shame-css/
+
+// 1) ## LOST AND FOUND: where and why are these declarations used? #############
+.white {
+  color: $eyeem-white;
+}
+
+.no-pad {
+  padding: 0% !important;
+}
+
+// used only in the Edit Account Settings page, there should be a better solution
+.eyeemcom {
+  line-height: 55px;
+}
+
+.browse-button {
+  margin-left: 36px;
+}
+
+
+// 2) ## ACTUAL HACKS that shouldn't be necessary #################################
+
+// when using width=100%, padding and border are additionally added, so that the
+// inputs exceed the boundaries of the containing div. Find a better solution that this.
+.dropdown-full-length {
+  width: 92% !important;
+}
+.full-width {
+  width: 100% !important;
+}
+
+// 3) ## CONFUSING DECLARATIONS ###################################################
+
+.dropdown-menu li .row-fluid {
+  line-height: 28px;
+  &:hover {
+    background-color: $navbarInverseBackground;
+  }
+  .padding {
+    padding: 0 {
+      left: 5px;
+      right: 5px;
+    }
+  }
+}
+.dropdown-menu li .row-fluid:first-child:hover {
+  background-color: transparent;
+}
+
+// ------- padding, padding, padding
+.padding {
+  padding: 3%;
+}
+.padding-photoview {
+  padding: 0px {
+    left: 3%;
+    right: 3%;
+  }
+}
+.padding-two-col {
+  padding: 3% {
+    left: 12%;
+    right: 12%;
+  }
+}
+.padding-dropdown {
+  padding: 4%;
+}
+.padding-dropdown-inner {
+  padding: 2%;
+  .btn-fb-blue {
+    width: 100%;
+  }
+}
+
+
+// 4) ## LEGACY CODE FROM THE OLD WEB #############################################
+
+
+/* ----------- MENTIONS ----------- */
+// needs to stay, only slightly refactored, yet
+
+.mentions-input-box {
+  position: relative;
+  .mentions {
+    display: none;
+    background-color: transparent;
+    z-index: 99;
+    height: 0 !important;
+    top: 15px;
+    left: 14px;
+    right: -13px;
+    padding: 0;
+    display: none;
+    border: none;
+    margin-right: 0;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    width: 200%;
+    color: transparent;
+    @include text-shadow(0 0 0);
+    .mentionHighlight {
+      display: inline-block;
+      background-color: rgba(1,1,1,0.5);
+    }
+  }
+  .mentions-autocomplete-list {
+    display: none;
+    position: absolute;
+    border: 1px solid #000;
+    z-index: 20;
+    width: 350px;
+    background-color: #444444;
+    bottom: 100%;
+    right: 20px;
+    height: 219px;
+    overflow: auto;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      background-color: #333;
+      padding: 0 5px;
+      margin: 0;
+      width: auto;
+      border-bottom: 1px solid #000;
+      height: 54px;
+      line-height: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      list-style: none;
+      white-space: nowrap;
+      em {
+        font-weight: bold;
+        font-style: none;
+      }
+      .fullname {
+        margin-top: 10px;
+      }
+      .nickname {
+        color: #797979;
+      }
+      &:hover {
+        background-color: #222;
+      }
+      &.active {
+        background-color: #222;
+      }
+      b {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.mentions-input-box .mentions-autocomplete-list li > img,
+.mentions-input-box .mentions-autocomplete-list li > div.icon {
+  float: left;
+  height: 34px;
+  margin-left: 6px;
+  margin-right: 11px;
+  margin-top: 11px;
+  width: 34px;
+  @include border-radius(3px);
+}
+
+.mentions-input-box .mentions > div {
+  display: inline-block;
+}
+
+.mentions-input-box .mentions > div > strong {
+  font-weight:normal;
+  background: #d8dfea;
+}
+
+.mentions-input-box .mentions > div > strong > span {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+
+
+
+/* ------------ ALBUM BOX ------------ */
+// probably gonna replaced by a different album list styling soon,
+// therefore no refactoring
+
+.albums_grid {
+  margin: 62px 24px;
+}
+
+.albums_grid .album_box {
+  display: inline-block;
+  position: relative;
+  margin: 0px 12px 36px;
+  float: left;
+}
+
+.album_box .border {
+  border: 1px solid;
+  position: absolute;
+  border-bottom: 0;
+  border-left: 0;
+  right: 0;
+  top: 0;
+  width: 262px;
+  height: 262px;
+  border-color: #666;
+}
+
+.album_box .all_in {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+
+.album_box .all_in a {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.album_box .all_in .latest_pic {
+  width: 268px;
+  float: left;
+  -webkit-transition: width 100ms ease-in 100ms; /* property duration timing-function delay */
+  -moz-transition: width 100ms ease-in 100ms;
+  -o-transition: width 100ms ease-in 100ms;
+  transition: width 100ms ease-in 100ms;
+}
+
+.album_box .all_in:hover .latest_pic {
+  width: 286px;
+}
+
+.album_box .in_box {
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    opacity: 0.8;
+    top: 288px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: top 100ms ease-in 100ms; /* property duration timing-function delay */
+    -moz-transition: top 100ms ease-in 100ms;
+    -o-transition: top 100ms ease-in 100ms;
+    transition: top 100ms ease-in 100ms;
+}
+
+.album_box .in_box {
+    text-shadow: 0 -1px 0 #000000;
+}
+
+.album_box:hover .in_box {
+    top: 0;
+}
+
+.album_box .in_box .in_item {
+  position: absolute;
+  left: 20px
+}
+
+.album_box .all_in .album_name {
+    bottom: 49px;
+    font-size: 20px;
+    font-family: $sofiaProBold;
+}
+
+.album_box .all_in .album_meta {
+  bottom: 20px;
+}
+
+.album_box .all_in .album_meta span {
+    height: 25px;
+    display: inline-block;
+}
+
+.album_box .all_in .album_meta img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.album_box .all_in .album_updated {
+    top: 20px;
+    font-size: 14px;
+}
+
+.album_box .album_under_name {
+  font-size: 12px;
+  color: darkgrey;
+  opacity: 0.5;
+  margin-top: 5px;
+  height: 14px;
+  overflow: hidden;
+}

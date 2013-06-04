@@ -1,0 +1,100 @@
+.btn-eyeem-primary {
+  background: #2e2e2e;
+  &:hover {
+    background: #444444;
+  }
+  &:active {
+    background: #1e1e1e;
+    color: #a3a3a3;
+  }
+}
+
+.btn-fb-blue {
+  color: $eyeem-white !important;
+  background-color: #3B5998 !important;
+  background: image-url("/images/fb-square.png") no-repeat;
+  background-position: left middle !important;
+  padding-left: 50px !important;
+  @include transition(none);
+  @include opacity(100);
+  &:hover {
+    @include transition(none);
+    background-color: lighten(#3B5998, 10%) !important;
+  }
+  &:active {
+    background: image-url("/images/fb-square.png") no-repeat !important;
+    background-color: #3B5998 !important;
+  }
+}
+
+.btn-eyeem-red {
+  background: $eyeem-buttonsicons-red !important;
+  @include opacity(100);
+  &:hover {
+    background: lighten(#993333, 10%) !important;
+  }
+}
+
+.btn-eyeem-green {
+  background: $eyeem-buttonsicons-green !important;
+  @include opacity(100);
+  &:hover {
+    background: lighten(#4d7c4d, 10%) !important;
+  }
+}
+
+.btn-eyeem-connected {
+  background: $eyeem-buttonsicons-green !important;
+  @include opacity(100);
+  &:hover {
+    background: $eyeem-buttonsicons-red !important;
+  }
+  &:after {
+    content: "Connected"; //using CSS for content might be frowned upon by some, but in this case I think it's legit. :)
+  }
+  &:hover:after {
+    content: "Disconnect";
+  }
+}
+
+.btn-fllw-follow {
+  min-width: 100px;
+  width: 100%;
+  background: $eyeem-buttonsicons-grey !important;
+  &:hover {
+    background: darken($eyeem-buttonsicons-grey, 10%) !important;
+  }
+  &:after {
+    content: "FOLLOW";
+  }
+  &:active {
+    background: $eyeem-buttonsicons-green !important;
+  }
+}
+
+.btn-fllw-following {
+  min-width: 100px;
+  width: 100%;
+  background: $eyeem-buttonsicons-green !important;
+  &:hover {
+    background: $eyeem-buttonsicons-red !important;
+  }
+  &:after, &.interim:hover:after {
+    content: "FOLLOWING"; //using CSS for content might be frowned upon by some, but in this case I think it's legit. :)
+  }
+  &:hover:after {
+    content: "UNFOLLOW";
+  }
+  &.interim:hover { // .interim is only used when the follow button was just clicked and is removed on first mouseleave
+    background: $eyeem-buttonsicons-green !important;
+  }
+}
+
+.btn-fllw-edit-profile {
+  min-width: 100px;
+  width: 100%;
+  background: $eyeem-buttonsicons-grey !important;
+  &:hover {
+    background: darken($eyeem-buttonsicons-grey, 10%) !important;
+  }
+}

@@ -1,25 +1,12 @@
-Get started with PHP and the EyeEm API in 1 minute!
+SNAPCAT - Photos of cats, by cats. For Android and as Chrome optimized Web App.
+--------------------------------------------------------------
 
-This boilerplate is made of Silex, Bootstrap, jQuery, the EyeEm PHP wrapper and a minimalist template system.
+Snapcat is an app that lets your cat take photos!
+Your cat will chase the fun icon and take selfies with the ease of his paw.
+Add filters or stickers from Aviary and directly share the photos to your favorite social networks: EyeEm, Facebook and Twitter.
+Watch your cat become a star!
+Snapcat is the very first social photo sharing app just for cats. Made by cats.
 
-Setup
------
-
-1. Clone this repository.
-
-2. Register a new Application at http://www.eyeem.com/developers
-
-3. Edit config.php with your Client Id and Client Secret.
-
-4. Get Composer and install dependencies:
-
-```
-curl -s http://getcomposer.org/installer | php
-php composer.phar install
-```
-
-5. From PHP 5.4, you can simply run:
-
-```
-php -S localhost:8008 -t web
-```
+---------------------------------------------------------------
+This is the code for the Web version at http://getsnapc.at/
+Built within 24 hours at Photo Hack Day Berlin.

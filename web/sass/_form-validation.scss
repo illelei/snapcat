@@ -1,0 +1,58 @@
+.field-box {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.field-error-text-inner {
+  margin: 0 12px;
+  font-size: 14px;
+}
+
+.field-error {
+  display: none;
+  font-size: 12px;
+  margin-left: 12px;
+  position: absolute;
+  top: 10px;
+  text-align: left;
+  width: 60%;
+  left: 100%;
+  color: white;
+  .arrow {
+    position: absolute;
+    left: -8px;
+  }
+}
+
+.valid-field-box .field-error {
+  display: none !important;
+}
+
+.field-spinner {
+  left: 100%;
+  margin-left: 12px;
+  position: absolute;
+  top: 15px;
+  display: none;
+  img {
+    width: 20px;
+  }
+}
+
+.field-error-text {
+  background-color: #993333;
+  padding: 7px;
+  display: inline-block;
+}
+
+.field-approved {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 102%;
+}
+
+.valid-field-box .field-approved {
+  display: block;
+}

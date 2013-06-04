@@ -1,0 +1,9 @@
+@include font-face("Sofia Pro Bold", font-files("Quicksand_Light.otf"));
+@include font-face("Sofia Pro Extra Light", font-files("Quicksand_Light.otf"));
+@include font-face("Sofia Pro Light", font-files("Quicksand_Light.otf"));
+@include font-face("Sofia Pro Regular", font-files("Quicksand_Light.otf"));
+
+$sofiaProRegular:   "Sofia Pro Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sofiaProLight:     "Sofia Pro Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sofiaProExtraLight:"Sofia Pro Extra Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sofiaProBold:      "Sofia Pro Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
